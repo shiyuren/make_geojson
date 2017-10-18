@@ -1,0 +1,17 @@
+{
+  "name": "make_geojson",
+  "version": "1.0.0",
+  "description": "针对wkt的数据表制作geojson工具,同时具有压缩和抽稀",
+  "main": "index.js",
+  "scripts": {
+    "create": "node index"
+  },
+  "keywords": ["geojson压缩","geojson抽稀","mysql数据库生成geojson"],
+  "author": "shiyuren",
+  "license": "ISC",
+  "dependencies": {
+    "mapshaper": "^0.4.55",
+    "mysql": "^2.15.0",
+    "terraformer-wkt-parser": "^1.1.2"
+  }
+}
