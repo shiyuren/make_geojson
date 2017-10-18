@@ -13,5 +13,9 @@
     "mapshaper": "^0.4.55",
     "mysql": "^2.15.0",
     "terraformer-wkt-parser": "^1.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecomfe/echarts.git"
   }
 }
