@@ -33,8 +33,8 @@ function handler(item,item_res){
         var f=item_res[i];
         //
         var properties={
-            NAME:f.code,
-            CODE:f.name,
+            NAME:f.name,
+            CODE:f.code,
             L_ID:f.l_id,
             LEVEL:f.level,
             L_PARID:f.l_parid
