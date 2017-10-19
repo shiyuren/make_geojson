@@ -6,3 +6,5 @@
     npm install
     npm run create
 ```
+- 数据输入文件夹 outData
+  [数据示例](https://github.com/shiyuren/make_geojson/blob/master/outData/start/100000.json)
