@@ -30,7 +30,7 @@ let config={
     //生成geojson的表
     tableName:"xzqh",
     //设置政区级别 用于生成 geojson-(1:国家；2:省；3:市；4:县-----)
-    level:[1,2],
+    level:[1],
     //抽稀程度1-100
     percent:50,
     root: __dirname

@@ -10,12 +10,13 @@ const level=config.level;
 async function create_geojson() {
     var query_total=`select name,code,l_id,l_parid from ${tableName} where level in (${level.join(",")})`;
     let res=await conn.query(query_total);
-    for(let i=0;i<res;i++){
+    for(let i=0;i<res.length;i++){
         var item=res[i];
         var query_item=`select * from ${tableName} where l_parid=${item.l_id}`;
-        let item_res=await conn.query(query_total);
+        let item_res=await conn.query(query_item);
         handler(item,item_res);
     }
+    console.log("---------"+new Date().toLocaleTimeString()+"-------------创建完成,共"+res.length+"个文件----------------------");
 }
 /**
  * 处理集合数据生成geojson
@@ -55,7 +56,6 @@ function handler(item,item_res){
         };
         features.push(feature);
     }
-    start+="/"+item.code+".json"
-    file.writeFile(start,JSON.stringify(json));
+    file.writeFile(start+"/"+item.code+".json",JSON.stringify(geojson));
 }
 module.exports.create_geojson=create_geojson;
